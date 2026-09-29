@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "plant-disease-vision"
+version = "0.1.0"
+description = "Leakage-aware transfer-learning baseline and explainable plant disease image classifier"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Portfolio Project" }]
+dependencies = [
+  "torch>=2.2",
+  "torchvision>=0.17",
+  "datasets>=2.19",
+  "numpy>=1.26",
+  "scikit-learn>=1.4",
+  "Pillow>=10.0",
+  "matplotlib>=3.8",
+  "streamlit>=1.35",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+
+[project.scripts]
+plantvision-train = "plantvision.train:main"
+plantvision-predict = "plantvision.inference:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
