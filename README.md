@@ -75,7 +75,7 @@ streamlit run src/plantvision/app.py
 
 The app lets you choose a trained backbone, upload an image or take a browser camera photo, and view top predictions plus a Grad-CAM overlay. It is an image-level research demo, not continuous video diagnosis.
 
-**Live demo:** [Plant Disease Vision](https://8501-iob7qxpw0ti3uvx48v4ep-a7a4073f.us4.manus.computer/). This temporary Sandbox-hosted URL is currently health-checked but is not a permanent deployment.
+**Temporary demo status:** The task-session demo stopped when its Sandbox was reset, so there is no active public demo link at present. Run the app locally with the command above, or deploy it with a trained model bundle for a persistent link.
 
 ## Tests and project layout
 
